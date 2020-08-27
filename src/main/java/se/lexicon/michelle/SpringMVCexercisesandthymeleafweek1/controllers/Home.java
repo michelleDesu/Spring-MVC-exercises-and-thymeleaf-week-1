@@ -36,4 +36,10 @@ public class Home {
         model.addAttribute("strings", strings);
         return "contactList";
     }
+
+    @GetMapping("/about")
+    public String about(){
+
+        return "about";
+    }
 }

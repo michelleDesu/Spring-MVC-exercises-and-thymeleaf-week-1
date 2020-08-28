@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!-- For adding Bootstrap in you HTML file -->
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css} "/>
+    <script defer th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script defer th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+    <script defer th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+    <title>Fever Check</title>
+
+    <!--Reference to css style-->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+    <!--Ask the user for their body temperature -->
+    <div>
+        <form>
+            <label>What is your body temperature?</label>
+            <input type="text" id="temperature" class="form-control mb-4 col-4" placeholder="Your body temperature">
+            <button type="submit" class="btn btn-info col-2">Check Temp</button>
+        </form>
+
+    </div>
+</body>
+</html>

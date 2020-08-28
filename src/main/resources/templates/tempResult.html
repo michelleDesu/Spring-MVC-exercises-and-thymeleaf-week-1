@@ -9,21 +9,27 @@
     <script defer th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
     <script defer th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
 
-    <title>Fever Check</title>
+    <title>Temperature Result</title>
 
     <!--Reference to css style-->
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-
-    <!--Ask the user for their body temperature -->
     <div>
-        <form th:action="@{/feverCheck}"  method="post">
-            <label>What is your body temperature?</label>
-            <input type="text" th:name="temperature" class="form-control mb-4 col-4" placeholder="Your body temperature">
-            <button type="submit" class="btn btn-info col-2">Check Temp</button>
-        </form>
-
+        <table>
+            <thead>
+            <tr>
+                <th>Your result:</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="text: ${temperatureResult}">
+                <td th:text="${text}">
+                </td>
+            </tr>
+            </tbody>
+        </table>
     </div>
+
 </body>
 </html>
